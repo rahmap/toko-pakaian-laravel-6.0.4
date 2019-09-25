@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('home-page');
+    return view('admin.dashboard');
+});
+
+Route::get('produk', function () {
+    return view('product-page');
 });
