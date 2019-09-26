@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
+    return view('home-page');
+});
+
+Route::get('admin', function () {
     return view('admin.dashboard');
 });
 
-Route::get('produk', function () {
-    return view('product-page');
-});
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');
